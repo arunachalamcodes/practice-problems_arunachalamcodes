@@ -1,0 +1,32 @@
+#calculate electricity bill
+
+units=int(input("enter the units used: "))
+temp=temp1=units
+check=0
+total1=total2=total3=total4=0
+r1=[4.5,6,8.5,9,11]    #slab rates r1,r2
+r2=[5.5,7,9.5,10,12]
+if units>1000:
+    total1=units-1000
+    units=1000
+if units>500:
+    total2=units-500
+    units=500
+    print(units)
+if units>300:
+    total3=units-300
+    units=300
+    print(units)
+if units>100:
+    total4=units-100
+    units=100
+    print(units)
+if temp>=1000:
+    answer=(total1*r2[4])+(total2*r2[3])+(total3*r2[2])+(total4*r2[1])
+else:
+    answer=(total1*r1[4])+(total2*r1[3])+(total3*r1[2])+(total4*r1[1])
+print(answer)
+
+
+
+
